@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.owned_boats>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Owned Boats</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.owner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.state)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.plate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vehicle)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.state)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.plate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vehicle)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

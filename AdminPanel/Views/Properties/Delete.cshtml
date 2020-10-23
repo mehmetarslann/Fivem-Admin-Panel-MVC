@@ -1,0 +1,129 @@
+﻿@model AdminPanel.Models.Entity.properties
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sil</h2>
+
+<h3>Kaydı Silmek İstediğinize Emin Misiniz?</h3>
+<div>
+    <h4>properties</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.label)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.label)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.entering)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.entering)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.exit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.exit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.inside)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.inside)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.outside)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.outside)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ipls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ipls)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gateway)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gateway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_single)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_single)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_room)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_room)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_gateway)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_gateway)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.room_menu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.room_menu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>

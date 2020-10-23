@@ -1,0 +1,41 @@
+﻿@model AdminPanel.Models.Entity.society_moneywash
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.identifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.society)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.society)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.amount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

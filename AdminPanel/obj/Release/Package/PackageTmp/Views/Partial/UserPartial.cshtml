@@ -1,0 +1,43 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.users>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.identifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.money)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bank)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.identifier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.money)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.job)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.job_grade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bank)
+            </td>
+        </tr>
+    }
+</table>

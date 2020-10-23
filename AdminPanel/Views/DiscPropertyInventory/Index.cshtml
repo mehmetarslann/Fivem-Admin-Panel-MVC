@@ -1,0 +1,40 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.disc_property_inventory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Disc Property Inventory</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.inventory_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.data)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.inventory_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

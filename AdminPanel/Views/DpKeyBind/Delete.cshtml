@@ -1,0 +1,128 @@
+﻿@model AdminPanel.Models.Entity.dpkeybinds
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sil</h2>
+
+<h3>Kaydı Silmek İstediğinize Emin Misiniz?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keybind1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keybind1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emote1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emote1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keybind2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keybind2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emote2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emote2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keybind3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keybind3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emote3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emote3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keybind4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keybind4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emote4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emote4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keybind5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keybind5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emote5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emote5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.keybind6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.keybind6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emote6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emote6)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>

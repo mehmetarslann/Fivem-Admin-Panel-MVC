@@ -1,0 +1,242 @@
+﻿@model AdminPanel.Models.Entity.users
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.identifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.license)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.license)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.money)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.money)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.skin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.skin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job_grade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job_grade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.loadout)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loadout)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.position)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.position)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.permission_level)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.permission_level)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.group)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.group)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firstname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateofbirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateofbirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.height)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastpos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastpos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DmvTest)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DmvTest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastdigits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastdigits)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.is_dead)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.is_dead)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isFirstConnection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isFirstConnection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tattoos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tattoos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_property)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_property)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

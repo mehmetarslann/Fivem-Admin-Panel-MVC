@@ -1,0 +1,58 @@
+﻿@model AdminPanel.Models.Entity.rented_vehicles
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.vehicle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vehicle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.player_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.player_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.base_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.base_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rent_price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rent_price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.plate }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

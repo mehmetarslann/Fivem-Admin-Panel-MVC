@@ -1,0 +1,89 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.launcher_ayarlar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Launcher Ayarlar</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Arkaplan Resmi")
+        </th>
+        <th>
+            @Html.Label("Sol Logo")
+        </th>
+        <th>
+            @Html.Label("Team İp")
+        </th>
+        <th>
+            @Html.Label("Discord Adres")
+        </th>
+        <th>
+            @Html.Label("Fivem Sunucu Port")
+        </th>
+        <th>
+            @Html.Label("Fivem Sunucu İp")
+        </th>
+        <th>
+            @Html.Label("Team Port")
+        </th>
+        <th>
+            @Html.Label("Forum Linki")
+        </th>
+        <th>
+            @Html.Label("Sol Panel Renk")
+        </th>
+        <th>
+            @Html.Label("Arkaplan Rengi")
+        </th>
+        <th>
+            @Html.Label("Sağ Panel Renk")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.arkaplan_resmi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sol_logo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.team_ip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.discord_adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sunucu_port)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sunucu_ip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.team_port)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.forum_adres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.launcher_renk.renk_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.launcher_renk1.renk_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.launcher_renk2.renk_id)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.ayarlar_id })
+        </td>
+    </tr>
+}
+
+</table>

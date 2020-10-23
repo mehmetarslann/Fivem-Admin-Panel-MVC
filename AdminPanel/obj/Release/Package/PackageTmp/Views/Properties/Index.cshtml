@@ -1,0 +1,106 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.properties>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Properties</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.label)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entering)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.exit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inside)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.outside)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ipls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gateway)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_single)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_room)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_gateway)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.room_menu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.label)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.entering)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.exit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inside)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.outside)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ipls)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gateway)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_single)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_room)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_gateway)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.room_menu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

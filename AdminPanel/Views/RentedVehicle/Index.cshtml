@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.rented_vehicles>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Rented Vehicles</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.vehicle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.player_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.base_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rent_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.vehicle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.player_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.base_price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.rent_price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.owner)
+            </td>
+            <td>
+                @Html.ActionLink("Detaylar", "Details", new { id = item.plate }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.plate })
+            </td>
+        </tr>
+    }
+
+</table>

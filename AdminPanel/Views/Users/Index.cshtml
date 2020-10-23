@@ -1,0 +1,196 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.users>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Users</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.identifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.license)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.money)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.skin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.job_grade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loadout)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.permission_level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.group)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateofbirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastpos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DmvTest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastdigits)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.is_dead)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.isFirstConnection)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tattoos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.last_property)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.identifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.license)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.money)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.skin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.job_grade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loadout)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bank)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.permission_level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.group)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateofbirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.height)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastpos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DmvTest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lastdigits)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.jail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.is_dead)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.isFirstConnection)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tattoos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone_number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.last_property)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

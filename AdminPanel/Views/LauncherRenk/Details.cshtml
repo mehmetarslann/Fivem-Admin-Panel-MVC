@@ -1,0 +1,42 @@
+﻿@model AdminPanel.Models.Entity.launcher_renk
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Renk Detayları</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Red")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.red)
+        </dd>
+
+        <dt>
+            @Html.Label("Green")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.green)
+        </dd>
+
+        <dt>
+            @Html.Label("Blue")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.blue)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.renk_id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

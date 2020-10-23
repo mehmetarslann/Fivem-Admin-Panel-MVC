@@ -1,0 +1,42 @@
+﻿@model AdminPanel.Models.Entity.user_mdt
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.char_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.char_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mugshot_url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mugshot_url)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>
