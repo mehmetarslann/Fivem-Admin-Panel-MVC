@@ -1,0 +1,122 @@
+﻿@model AdminPanel.Models.Entity.banlisthistory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.identifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.license)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.license)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.liveid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.liveid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.xblid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.xblid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.discord)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.discord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.playerip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.playerip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.targetplayername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.targetplayername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sourceplayername)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sourceplayername)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.reason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.reason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.timeat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.timeat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.added)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.added)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.expiration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.expiration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.permanent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.permanent)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

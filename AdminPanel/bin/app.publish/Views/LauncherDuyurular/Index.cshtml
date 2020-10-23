@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.launcher_duyurular>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Launcher Duyurular</h2>
+
+<p>
+    @Html.ActionLink("Yeni Duyuru Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Başlık")
+        </th>
+        <th>
+            @Html.Label("Metin")
+        </th>
+        <th>
+            @Html.Label("Tarih")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.duyuru_baslik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duyuru_metin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duyuru_tarih)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.duyuru_id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.duyuru_id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.duyuru_id })
+        </td>
+    </tr>
+}
+
+</table>

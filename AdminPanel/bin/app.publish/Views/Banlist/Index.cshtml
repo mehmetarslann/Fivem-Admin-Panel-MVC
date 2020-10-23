@@ -1,0 +1,106 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.banlist>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Banlist</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.identifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.license)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.liveid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.xblid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.discord)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.playerip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.targetplayername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sourceplayername)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.reason)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timeat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.added)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expiration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.permanent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.identifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.license)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.liveid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.xblid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.discord)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.playerip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.targetplayername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sourceplayername)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.reason)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timeat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.added)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expiration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.permanent)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

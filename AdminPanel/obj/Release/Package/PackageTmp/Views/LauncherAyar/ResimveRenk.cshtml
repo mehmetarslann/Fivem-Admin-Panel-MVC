@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.launcher_ayarlar>
+
+@{
+    ViewBag.Title = "ResimveRenk";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resim ve Renk İşlemleri</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Arkaplan Resmi")
+        </th>
+        <th>
+            @Html.Label("Sol Logo")
+        </th>
+        <th>
+            @Html.Label("Sol Panel Renk")
+        </th>
+        <th>
+            @Html.Label("Arkaplan Renk")
+        </th>
+        <th>
+            @Html.Label("Sağ Panel Renk")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+
+                @Html.DisplayFor(modelItem => item.arkaplan_resmi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sol_logo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.launcher_renk1.renk_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.launcher_renk2.renk_id)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "RenkEdit", new { id = item.ayarlar_id })
+            </td>
+        </tr>
+    }
+
+</table>

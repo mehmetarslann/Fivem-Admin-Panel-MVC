@@ -1,0 +1,1331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sunucu1sModelStoreContainer" CdmEntityContainer="sunucu1sEntities">
+    <EntitySetMapping Name="accounts">
+      <EntityTypeMapping TypeName="sunucu1sModel.accounts">
+        <MappingFragment StoreEntitySet="accounts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="money" ColumnName="money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addon_account">
+      <EntityTypeMapping TypeName="sunucu1sModel.addon_account">
+        <MappingFragment StoreEntitySet="addon_account">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="shared" ColumnName="shared" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addon_account_data">
+      <EntityTypeMapping TypeName="sunucu1sModel.addon_account_data">
+        <MappingFragment StoreEntitySet="addon_account_data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="account_name" ColumnName="account_name" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addon_inventory">
+      <EntityTypeMapping TypeName="sunucu1sModel.addon_inventory">
+        <MappingFragment StoreEntitySet="addon_inventory">
+          <ScalarProperty Name="addon_id" ColumnName="addon_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="shared" ColumnName="shared" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="addon_inventory_items">
+      <EntityTypeMapping TypeName="sunucu1sModel.addon_inventory_items">
+        <MappingFragment StoreEntitySet="addon_inventory_items">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="inventory_name" ColumnName="inventory_name" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aircraft_categories">
+      <EntityTypeMapping TypeName="sunucu1sModel.aircraft_categories">
+        <MappingFragment StoreEntitySet="aircraft_categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aircraftdealer_aircrafts">
+      <EntityTypeMapping TypeName="sunucu1sModel.aircraftdealer_aircrafts">
+        <MappingFragment StoreEntitySet="aircraftdealer_aircrafts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aircrafts">
+      <EntityTypeMapping TypeName="sunucu1sModel.aircrafts">
+        <MappingFragment StoreEntitySet="aircrafts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="amekanikkasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.amekanikkasa">
+        <MappingFragment StoreEntitySet="amekanikkasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="banlist">
+      <EntityTypeMapping TypeName="sunucu1sModel.banlist">
+        <MappingFragment StoreEntitySet="banlist">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="license" ColumnName="license" />
+          <ScalarProperty Name="liveid" ColumnName="liveid" />
+          <ScalarProperty Name="xblid" ColumnName="xblid" />
+          <ScalarProperty Name="discord" ColumnName="discord" />
+          <ScalarProperty Name="playerip" ColumnName="playerip" />
+          <ScalarProperty Name="targetplayername" ColumnName="targetplayername" />
+          <ScalarProperty Name="sourceplayername" ColumnName="sourceplayername" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="timeat" ColumnName="timeat" />
+          <ScalarProperty Name="added" ColumnName="added" />
+          <ScalarProperty Name="expiration" ColumnName="expiration" />
+          <ScalarProperty Name="permanent" ColumnName="permanent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="banlisthistory">
+      <EntityTypeMapping TypeName="sunucu1sModel.banlisthistory">
+        <MappingFragment StoreEntitySet="banlisthistory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="license" ColumnName="license" />
+          <ScalarProperty Name="liveid" ColumnName="liveid" />
+          <ScalarProperty Name="xblid" ColumnName="xblid" />
+          <ScalarProperty Name="discord" ColumnName="discord" />
+          <ScalarProperty Name="playerip" ColumnName="playerip" />
+          <ScalarProperty Name="targetplayername" ColumnName="targetplayername" />
+          <ScalarProperty Name="sourceplayername" ColumnName="sourceplayername" />
+          <ScalarProperty Name="reason" ColumnName="reason" />
+          <ScalarProperty Name="timeat" ColumnName="timeat" />
+          <ScalarProperty Name="added" ColumnName="added" />
+          <ScalarProperty Name="expiration" ColumnName="expiration" />
+          <ScalarProperty Name="permanent" ColumnName="permanent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="billing">
+      <EntityTypeMapping TypeName="sunucu1sModel.billing">
+        <MappingFragment StoreEntitySet="billing">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="sender" ColumnName="sender" />
+          <ScalarProperty Name="target_type" ColumnName="target_type" />
+          <ScalarProperty Name="target" ColumnName="target" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="black_muhshipments">
+      <EntityTypeMapping TypeName="sunucu1sModel.black_muhshipments">
+        <MappingFragment StoreEntitySet="black_muhshipments">
+          <ScalarProperty Name="black_id" ColumnName="black_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="black_shipments">
+      <EntityTypeMapping TypeName="sunucu1sModel.black_shipments">
+        <MappingFragment StoreEntitySet="black_shipments">
+          <ScalarProperty Name="b_id" ColumnName="b_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="blackmarket">
+      <EntityTypeMapping TypeName="sunucu1sModel.blackmarket">
+        <MappingFragment StoreEntitySet="blackmarket">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bmekanikkasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.bmekanikkasa">
+        <MappingFragment StoreEntitySet="bmekanikkasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="boat_categories">
+      <EntityTypeMapping TypeName="sunucu1sModel.boat_categories">
+        <MappingFragment StoreEntitySet="boat_categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="boatdealer_boats">
+      <EntityTypeMapping TypeName="sunucu1sModel.boatdealer_boats">
+        <MappingFragment StoreEntitySet="boatdealer_boats">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="boats">
+      <EntityTypeMapping TypeName="sunucu1sModel.boats">
+        <MappingFragment StoreEntitySet="boats">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="car_parking">
+      <EntityTypeMapping TypeName="sunucu1sModel.car_parking">
+        <MappingFragment StoreEntitySet="car_parking">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="parking" ColumnName="parking" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cardealer_vehicles">
+      <EntityTypeMapping TypeName="sunucu1sModel.cardealer_vehicles">
+        <MappingFragment StoreEntitySet="cardealer_vehicles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cete1kasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.cete1kasa">
+        <MappingFragment StoreEntitySet="cete1kasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cete2kasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.cete2kasa">
+        <MappingFragment StoreEntitySet="cete2kasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cete3kasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.cete3kasa">
+        <MappingFragment StoreEntitySet="cete3kasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cete4kasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.cete4kasa">
+        <MappingFragment StoreEntitySet="cete4kasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cete5kasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.cete5kasa">
+        <MappingFragment StoreEntitySet="cete5kasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cete6kasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.cete6kasa">
+        <MappingFragment StoreEntitySet="cete6kasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="characters">
+      <EntityTypeMapping TypeName="sunucu1sModel.characters">
+        <MappingFragment StoreEntitySet="characters">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="lastdigits" ColumnName="lastdigits" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cmekanikkasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.cmekanikkasa">
+        <MappingFragment StoreEntitySet="cmekanikkasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="combat">
+      <EntityTypeMapping TypeName="sunucu1sModel.combat">
+        <MappingFragment StoreEntitySet="combat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datastore">
+      <EntityTypeMapping TypeName="sunucu1sModel.datastore">
+        <MappingFragment StoreEntitySet="datastore">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="shared" ColumnName="shared" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datastore_data">
+      <EntityTypeMapping TypeName="sunucu1sModel.datastore_data">
+        <MappingFragment StoreEntitySet="datastore_data">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="datastores">
+      <EntityTypeMapping TypeName="sunucu1sModel.datastores">
+        <MappingFragment StoreEntitySet="datastores">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disc_ammo">
+      <EntityTypeMapping TypeName="sunucu1sModel.disc_ammo">
+        <MappingFragment StoreEntitySet="disc_ammo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="hash" ColumnName="hash" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disc_inventory">
+      <EntityTypeMapping TypeName="sunucu1sModel.disc_inventory">
+        <MappingFragment StoreEntitySet="disc_inventory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disc_inventory_itemdata">
+      <EntityTypeMapping TypeName="sunucu1sModel.disc_inventory_itemdata">
+        <MappingFragment StoreEntitySet="disc_inventory_itemdata">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="closeonuse" ColumnName="closeonuse" />
+          <ScalarProperty Name="max" ColumnName="max" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disc_property">
+      <EntityTypeMapping TypeName="sunucu1sModel.disc_property">
+        <MappingFragment StoreEntitySet="disc_property">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="sold" ColumnName="sold" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="locked" ColumnName="locked" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disc_property_garage_vehicles">
+      <EntityTypeMapping TypeName="sunucu1sModel.disc_property_garage_vehicles">
+        <MappingFragment StoreEntitySet="disc_property_garage_vehicles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="props" ColumnName="props" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disc_property_inventory">
+      <EntityTypeMapping TypeName="sunucu1sModel.disc_property_inventory">
+        <MappingFragment StoreEntitySet="disc_property_inventory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="inventory_name" ColumnName="inventory_name" />
+          <ScalarProperty Name="data" ColumnName="data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="disc_property_owners">
+      <EntityTypeMapping TypeName="sunucu1sModel.disc_property_owners">
+        <MappingFragment StoreEntitySet="disc_property_owners">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dmekanikkasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.dmekanikkasa">
+        <MappingFragment StoreEntitySet="dmekanikkasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dpkeybinds">
+      <EntityTypeMapping TypeName="sunucu1sModel.dpkeybinds">
+        <MappingFragment StoreEntitySet="dpkeybinds">
+          <ScalarProperty Name="d_id" ColumnName="d_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="keybind1" ColumnName="keybind1" />
+          <ScalarProperty Name="emote1" ColumnName="emote1" />
+          <ScalarProperty Name="keybind2" ColumnName="keybind2" />
+          <ScalarProperty Name="emote2" ColumnName="emote2" />
+          <ScalarProperty Name="keybind3" ColumnName="keybind3" />
+          <ScalarProperty Name="emote3" ColumnName="emote3" />
+          <ScalarProperty Name="keybind4" ColumnName="keybind4" />
+          <ScalarProperty Name="emote4" ColumnName="emote4" />
+          <ScalarProperty Name="keybind5" ColumnName="keybind5" />
+          <ScalarProperty Name="emote5" ColumnName="emote5" />
+          <ScalarProperty Name="keybind6" ColumnName="keybind6" />
+          <ScalarProperty Name="emote6" ColumnName="emote6" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="elkoyma">
+      <EntityTypeMapping TypeName="sunucu1sModel.elkoyma">
+        <MappingFragment StoreEntitySet="elkoyma">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="esrar">
+      <EntityTypeMapping TypeName="sunucu1sModel.esrar">
+        <MappingFragment StoreEntitySet="esrar">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faturalog">
+      <EntityTypeMapping TypeName="sunucu1sModel.faturalog">
+        <MappingFragment StoreEntitySet="faturalog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fine_types">
+      <EntityTypeMapping TypeName="sunucu1sModel.fine_types">
+        <MappingFragment StoreEntitySet="fine_types">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="glovebox_inventory">
+      <EntityTypeMapping TypeName="sunucu1sModel.glovebox_inventory">
+        <MappingFragment StoreEntitySet="glovebox_inventory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="owned" ColumnName="owned" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hardlog">
+      <EntityTypeMapping TypeName="sunucu1sModel.hardlog">
+        <MappingFragment StoreEntitySet="hardlog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hastane">
+      <EntityTypeMapping TypeName="sunucu1sModel.hastane">
+        <MappingFragment StoreEntitySet="hastane">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="identities">
+      <EntityTypeMapping TypeName="sunucu1sModel.identities">
+        <MappingFragment StoreEntitySet="identities">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="is_male" ColumnName="is_male" />
+          <ScalarProperty Name="roles" ColumnName="roles" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="illegalsatis">
+      <EntityTypeMapping TypeName="sunucu1sModel.illegalsatis">
+        <MappingFragment StoreEntitySet="illegalsatis">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insto_accounts">
+      <EntityTypeMapping TypeName="sunucu1sModel.insto_accounts">
+        <MappingFragment StoreEntitySet="insto_accounts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="forename" ColumnName="forename" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="avatar_url" ColumnName="avatar_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insto_instas">
+      <EntityTypeMapping TypeName="sunucu1sModel.insto_instas">
+        <MappingFragment StoreEntitySet="insto_instas">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="authorId" ColumnName="authorId" />
+          <ScalarProperty Name="realUser" ColumnName="realUser" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="filters" ColumnName="filters" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="likes" ColumnName="likes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="insto_likes">
+      <EntityTypeMapping TypeName="sunucu1sModel.insto_likes">
+        <MappingFragment StoreEntitySet="insto_likes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="authorId" ColumnName="authorId" />
+          <ScalarProperty Name="inapId" ColumnName="inapId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="inventories">
+      <EntityTypeMapping TypeName="sunucu1sModel.inventories">
+        <MappingFragment StoreEntitySet="inventories">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="items" ColumnName="items" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="sunucu1sModel.items">
+        <MappingFragment StoreEntitySet="items">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+          <ScalarProperty Name="rare" ColumnName="rare" />
+          <ScalarProperty Name="can_remove" ColumnName="can_remove" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="job_grades">
+      <EntityTypeMapping TypeName="sunucu1sModel.job_grades">
+        <MappingFragment StoreEntitySet="job_grades">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="job_name" ColumnName="job_name" />
+          <ScalarProperty Name="grade" ColumnName="grade" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="skin_male" ColumnName="skin_male" />
+          <ScalarProperty Name="skin_female" ColumnName="skin_female" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jobs">
+      <EntityTypeMapping TypeName="sunucu1sModel.jobs">
+        <MappingFragment StoreEntitySet="jobs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="whitelisted" ColumnName="whitelisted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kaiser_ciuchy">
+      <EntityTypeMapping TypeName="sunucu1sModel.kaiser_ciuchy">
+        <MappingFragment StoreEntitySet="kaiser_ciuchy">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="bag" ColumnName="bag" />
+          <ScalarProperty Name="bag2" ColumnName="bag2" />
+          <ScalarProperty Name="tshirt" ColumnName="tshirt" />
+          <ScalarProperty Name="tshirt2" ColumnName="tshirt2" />
+          <ScalarProperty Name="torso" ColumnName="torso" />
+          <ScalarProperty Name="torso2" ColumnName="torso2" />
+          <ScalarProperty Name="legs" ColumnName="legs" />
+          <ScalarProperty Name="legs2" ColumnName="legs2" />
+          <ScalarProperty Name="shoes" ColumnName="shoes" />
+          <ScalarProperty Name="shoes2" ColumnName="shoes2" />
+          <ScalarProperty Name="arms" ColumnName="arms" />
+          <ScalarProperty Name="chain" ColumnName="chain" />
+          <ScalarProperty Name="chain2" ColumnName="chain2" />
+          <ScalarProperty Name="mask" ColumnName="mask" />
+          <ScalarProperty Name="mask2" ColumnName="mask2" />
+          <ScalarProperty Name="decals" ColumnName="decals" />
+          <ScalarProperty Name="decals2" ColumnName="decals2" />
+          <ScalarProperty Name="hat" ColumnName="hat" />
+          <ScalarProperty Name="hat2" ColumnName="hat2" />
+          <ScalarProperty Name="glasses" ColumnName="glasses" />
+          <ScalarProperty Name="glasses2" ColumnName="glasses2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kokain">
+      <EntityTypeMapping TypeName="sunucu1sModel.kokain">
+        <MappingFragment StoreEntitySet="kokain">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="launcher_ayarlar">
+      <EntityTypeMapping TypeName="sunucu1sModel.launcher_ayarlar">
+        <MappingFragment StoreEntitySet="launcher_ayarlar">
+          <ScalarProperty Name="ayarlar_id" ColumnName="ayarlar_id" />
+          <ScalarProperty Name="arkaplan_resmi" ColumnName="arkaplan_resmi" />
+          <ScalarProperty Name="sol_logo" ColumnName="sol_logo" />
+          <ScalarProperty Name="team_ip" ColumnName="team_ip" />
+          <ScalarProperty Name="discord_adres" ColumnName="discord_adres" />
+          <ScalarProperty Name="sunucu_port" ColumnName="sunucu_port" />
+          <ScalarProperty Name="sunucu_ip" ColumnName="sunucu_ip" />
+          <ScalarProperty Name="team_port" ColumnName="team_port" />
+          <ScalarProperty Name="forum_adres" ColumnName="forum_adres" />
+          <ScalarProperty Name="sol_renk" ColumnName="sol_renk" />
+          <ScalarProperty Name="main_renk" ColumnName="main_renk" />
+          <ScalarProperty Name="sag_renk" ColumnName="sag_renk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="launcher_duyurular">
+      <EntityTypeMapping TypeName="sunucu1sModel.launcher_duyurular">
+        <MappingFragment StoreEntitySet="launcher_duyurular">
+          <ScalarProperty Name="duyuru_id" ColumnName="duyuru_id" />
+          <ScalarProperty Name="duyuru_baslik" ColumnName="duyuru_baslik" />
+          <ScalarProperty Name="duyuru_metin" ColumnName="duyuru_metin" />
+          <ScalarProperty Name="duyuru_tarih" ColumnName="duyuru_tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="launcher_renk">
+      <EntityTypeMapping TypeName="sunucu1sModel.launcher_renk">
+        <MappingFragment StoreEntitySet="launcher_renk">
+          <ScalarProperty Name="renk_id" ColumnName="renk_id" />
+          <ScalarProperty Name="red" ColumnName="red" />
+          <ScalarProperty Name="green" ColumnName="green" />
+          <ScalarProperty Name="blue" ColumnName="blue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="launcher_uyeler">
+      <EntityTypeMapping TypeName="sunucu1sModel.launcher_uyeler">
+        <MappingFragment StoreEntitySet="launcher_uyeler">
+          <ScalarProperty Name="uye_id" ColumnName="uye_id" />
+          <ScalarProperty Name="uye_ad" ColumnName="uye_ad" />
+          <ScalarProperty Name="uye_soyad" ColumnName="uye_soyad" />
+          <ScalarProperty Name="uye_kadi" ColumnName="uye_kadi" />
+          <ScalarProperty Name="uye_parola" ColumnName="uye_parola" />
+          <ScalarProperty Name="uye_gtarih" ColumnName="uye_gtarih" />
+          <ScalarProperty Name="steam_id" ColumnName="steam_id" />
+          <ScalarProperty Name="discord_id" ColumnName="discord_id" />
+          <ScalarProperty Name="hile_tespiti" ColumnName="hile_tespiti" />
+          <ScalarProperty Name="login_durum" ColumnName="login_durum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="licenses">
+      <EntityTypeMapping TypeName="sunucu1sModel.licenses">
+        <MappingFragment StoreEntitySet="licenses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lsrp_motels">
+      <EntityTypeMapping TypeName="sunucu1sModel.lsrp_motels">
+        <MappingFragment StoreEntitySet="lsrp_motels">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ident" ColumnName="ident" />
+          <ScalarProperty Name="motel_id" ColumnName="motel_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mdt_reports">
+      <EntityTypeMapping TypeName="sunucu1sModel.mdt_reports">
+        <MappingFragment StoreEntitySet="mdt_reports">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="char_id" ColumnName="char_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="incident" ColumnName="incident" />
+          <ScalarProperty Name="charges" ColumnName="charges" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="jailtime" ColumnName="jailtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mdt_warrants">
+      <EntityTypeMapping TypeName="sunucu1sModel.mdt_warrants">
+        <MappingFragment StoreEntitySet="mdt_warrants">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="char_id" ColumnName="char_id" />
+          <ScalarProperty Name="report_id" ColumnName="report_id" />
+          <ScalarProperty Name="report_title" ColumnName="report_title" />
+          <ScalarProperty Name="charges" ColumnName="charges" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="expire" ColumnName="expire" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="author" ColumnName="author" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migrations">
+      <EntityTypeMapping TypeName="sunucu1sModel.migrations">
+        <MappingFragment StoreEntitySet="migrations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="module" ColumnName="module" />
+          <ScalarProperty Name="last" ColumnName="last" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="outfits">
+      <EntityTypeMapping TypeName="sunucu1sModel.outfits">
+        <MappingFragment StoreEntitySet="outfits">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idSteam" ColumnName="idSteam" />
+          <ScalarProperty Name="dad" ColumnName="dad" />
+          <ScalarProperty Name="mum" ColumnName="mum" />
+          <ScalarProperty Name="dadmumpercent" ColumnName="dadmumpercent" />
+          <ScalarProperty Name="skinton" ColumnName="skinton" />
+          <ScalarProperty Name="eyecolor" ColumnName="eyecolor" />
+          <ScalarProperty Name="acne" ColumnName="acne" />
+          <ScalarProperty Name="skinproblem" ColumnName="skinproblem" />
+          <ScalarProperty Name="freckle" ColumnName="freckle" />
+          <ScalarProperty Name="wrinkle" ColumnName="wrinkle" />
+          <ScalarProperty Name="wrinkleopacity" ColumnName="wrinkleopacity" />
+          <ScalarProperty Name="eyebrow" ColumnName="eyebrow" />
+          <ScalarProperty Name="eyebrowopacity" ColumnName="eyebrowopacity" />
+          <ScalarProperty Name="beard" ColumnName="beard" />
+          <ScalarProperty Name="beardopacity" ColumnName="beardopacity" />
+          <ScalarProperty Name="beardcolor" ColumnName="beardcolor" />
+          <ScalarProperty Name="hair" ColumnName="hair" />
+          <ScalarProperty Name="hairtext" ColumnName="hairtext" />
+          <ScalarProperty Name="torso" ColumnName="torso" />
+          <ScalarProperty Name="torsotext" ColumnName="torsotext" />
+          <ScalarProperty Name="leg" ColumnName="leg" />
+          <ScalarProperty Name="legtext" ColumnName="legtext" />
+          <ScalarProperty Name="shoes" ColumnName="shoes" />
+          <ScalarProperty Name="shoestext" ColumnName="shoestext" />
+          <ScalarProperty Name="accessory" ColumnName="accessory" />
+          <ScalarProperty Name="accessorytext" ColumnName="accessorytext" />
+          <ScalarProperty Name="undershirt" ColumnName="undershirt" />
+          <ScalarProperty Name="undershirttext" ColumnName="undershirttext" />
+          <ScalarProperty Name="torso2" ColumnName="torso2" />
+          <ScalarProperty Name="torso2text" ColumnName="torso2text" />
+          <ScalarProperty Name="prop_hat" ColumnName="prop_hat" />
+          <ScalarProperty Name="prop_hat_text" ColumnName="prop_hat_text" />
+          <ScalarProperty Name="prop_glasses" ColumnName="prop_glasses" />
+          <ScalarProperty Name="prop_glasses_text" ColumnName="prop_glasses_text" />
+          <ScalarProperty Name="prop_earrings" ColumnName="prop_earrings" />
+          <ScalarProperty Name="prop_earrings_text" ColumnName="prop_earrings_text" />
+          <ScalarProperty Name="prop_watches" ColumnName="prop_watches" />
+          <ScalarProperty Name="prop_watches_text" ColumnName="prop_watches_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="owned_aircrafts">
+      <EntityTypeMapping TypeName="sunucu1sModel.owned_aircrafts">
+        <MappingFragment StoreEntitySet="owned_aircrafts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="owned_boats">
+      <EntityTypeMapping TypeName="sunucu1sModel.owned_boats">
+        <MappingFragment StoreEntitySet="owned_boats">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="owned_properties">
+      <EntityTypeMapping TypeName="sunucu1sModel.owned_properties">
+        <MappingFragment StoreEntitySet="owned_properties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="rented" ColumnName="rented" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="owned_vehicles">
+      <EntityTypeMapping TypeName="sunucu1sModel.owned_vehicles">
+        <MappingFragment StoreEntitySet="owned_vehicles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="stored" ColumnName="stored" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="jamstate" ColumnName="jamstate" />
+          <ScalarProperty Name="lasthouse" ColumnName="lasthouse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="owned_vehicles_headlights">
+      <EntityTypeMapping TypeName="sunucu1sModel.owned_vehicles_headlights">
+        <MappingFragment StoreEntitySet="owned_vehicles_headlights">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="color" ColumnName="color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phone_app_chat">
+      <EntityTypeMapping TypeName="sunucu1sModel.phone_app_chat">
+        <MappingFragment StoreEntitySet="phone_app_chat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="channel" ColumnName="channel" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phone_calls">
+      <EntityTypeMapping TypeName="sunucu1sModel.phone_calls">
+        <MappingFragment StoreEntitySet="phone_calls">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="incoming" ColumnName="incoming" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="accepts" ColumnName="accepts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phone_ch_reddit">
+      <EntityTypeMapping TypeName="sunucu1sModel.phone_ch_reddit">
+        <MappingFragment StoreEntitySet="phone_ch_reddit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="redgkit" ColumnName="redgkit" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phone_messages">
+      <EntityTypeMapping TypeName="sunucu1sModel.phone_messages">
+        <MappingFragment StoreEntitySet="phone_messages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="transmitter" ColumnName="transmitter" />
+          <ScalarProperty Name="receiver" ColumnName="receiver" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="isRead" ColumnName="isRead" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phone_reddit">
+      <EntityTypeMapping TypeName="sunucu1sModel.phone_reddit">
+        <MappingFragment StoreEntitySet="phone_reddit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="redgkit" ColumnName="redgkit" />
+          <ScalarProperty Name="reditsage" ColumnName="reditsage" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phone_shops">
+      <EntityTypeMapping TypeName="sunucu1sModel.phone_shops">
+        <MappingFragment StoreEntitySet="phone_shops">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="store" ColumnName="store" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phone_users_contacts">
+      <EntityTypeMapping TypeName="sunucu1sModel.phone_users_contacts">
+        <MappingFragment StoreEntitySet="phone_users_contacts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="display" ColumnName="display" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="players">
+      <EntityTypeMapping TypeName="sunucu1sModel.players">
+        <MappingFragment StoreEntitySet="players">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="identity_id" ColumnName="identity_id" />
+          <ScalarProperty Name="roles" ColumnName="roles" />
+          <ScalarProperty Name="accessories" ColumnName="accessories" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="poliskasa">
+      <EntityTypeMapping TypeName="sunucu1sModel.poliskasa">
+        <MappingFragment StoreEntitySet="poliskasa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender1" ColumnName="Sender1" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Sender2" ColumnName="Sender2" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="properties">
+      <EntityTypeMapping TypeName="sunucu1sModel.properties">
+        <MappingFragment StoreEntitySet="properties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+          <ScalarProperty Name="entering" ColumnName="entering" />
+          <ScalarProperty Name="exit" ColumnName="exit" />
+          <ScalarProperty Name="inside" ColumnName="inside" />
+          <ScalarProperty Name="outside" ColumnName="outside" />
+          <ScalarProperty Name="ipls" ColumnName="ipls" />
+          <ScalarProperty Name="gateway" ColumnName="gateway" />
+          <ScalarProperty Name="is_single" ColumnName="is_single" />
+          <ScalarProperty Name="is_room" ColumnName="is_room" />
+          <ScalarProperty Name="is_gateway" ColumnName="is_gateway" />
+          <ScalarProperty Name="room_menu" ColumnName="room_menu" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="owned" ColumnName="owned" />
+          <ScalarProperty Name="free" ColumnName="free" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rented_vehicles">
+      <EntityTypeMapping TypeName="sunucu1sModel.rented_vehicles">
+        <MappingFragment StoreEntitySet="rented_vehicles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="vehicle" ColumnName="vehicle" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="player_name" ColumnName="player_name" />
+          <ScalarProperty Name="base_price" ColumnName="base_price" />
+          <ScalarProperty Name="rent_price" ColumnName="rent_price" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="society_moneywash">
+      <EntityTypeMapping TypeName="sunucu1sModel.society_moneywash">
+        <MappingFragment StoreEntitySet="society_moneywash">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="society" ColumnName="society" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="transfer">
+      <EntityTypeMapping TypeName="sunucu1sModel.transfer">
+        <MappingFragment StoreEntitySet="transfer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Reciever" ColumnName="Reciever" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="truck_inventory">
+      <EntityTypeMapping TypeName="sunucu1sModel.truck_inventory">
+        <MappingFragment StoreEntitySet="truck_inventory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="itemt" ColumnName="itemt" />
+          <ScalarProperty Name="owned" ColumnName="owned" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trunk_inventory">
+      <EntityTypeMapping TypeName="sunucu1sModel.trunk_inventory">
+        <MappingFragment StoreEntitySet="trunk_inventory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="owned" ColumnName="owned" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="twitter_accounts">
+      <EntityTypeMapping TypeName="sunucu1sModel.twitter_accounts">
+        <MappingFragment StoreEntitySet="twitter_accounts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="avatar_url" ColumnName="avatar_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="twitter_likes">
+      <EntityTypeMapping TypeName="sunucu1sModel.twitter_likes">
+        <MappingFragment StoreEntitySet="twitter_likes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="authorId" ColumnName="authorId" />
+          <ScalarProperty Name="tweetId" ColumnName="tweetId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="twitter_tweets">
+      <EntityTypeMapping TypeName="sunucu1sModel.twitter_tweets">
+        <MappingFragment StoreEntitySet="twitter_tweets">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="authorId" ColumnName="authorId" />
+          <ScalarProperty Name="realUser" ColumnName="realUser" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="likes" ColumnName="likes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_accounts">
+      <EntityTypeMapping TypeName="sunucu1sModel.user_accounts">
+        <MappingFragment StoreEntitySet="user_accounts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="money" ColumnName="money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_convictions">
+      <EntityTypeMapping TypeName="sunucu1sModel.user_convictions">
+        <MappingFragment StoreEntitySet="user_convictions">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="char_id" ColumnName="char_id" />
+          <ScalarProperty Name="offense" ColumnName="offense" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_inventory">
+      <EntityTypeMapping TypeName="sunucu1sModel.user_inventory">
+        <MappingFragment StoreEntitySet="user_inventory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="item" ColumnName="item" />
+          <ScalarProperty Name="count" ColumnName="count" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_licenses">
+      <EntityTypeMapping TypeName="sunucu1sModel.user_licenses">
+        <MappingFragment StoreEntitySet="user_licenses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_mdt">
+      <EntityTypeMapping TypeName="sunucu1sModel.user_mdt">
+        <MappingFragment StoreEntitySet="user_mdt">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="char_id" ColumnName="char_id" />
+          <ScalarProperty Name="notes" ColumnName="notes" />
+          <ScalarProperty Name="mugshot_url" ColumnName="mugshot_url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="sunucu1sModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+          <ScalarProperty Name="license" ColumnName="license" />
+          <ScalarProperty Name="money" ColumnName="money" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="skin" ColumnName="skin" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="job_grade" ColumnName="job_grade" />
+          <ScalarProperty Name="loadout" ColumnName="loadout" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="bank" ColumnName="bank" />
+          <ScalarProperty Name="permission_level" ColumnName="permission_level" />
+          <ScalarProperty Name="group" ColumnName="group" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="dateofbirth" ColumnName="dateofbirth" />
+          <ScalarProperty Name="sex" ColumnName="sex" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="lastpos" ColumnName="lastpos" />
+          <ScalarProperty Name="DmvTest" ColumnName="DmvTest" />
+          <ScalarProperty Name="vote" ColumnName="vote" />
+          <ScalarProperty Name="lastdigits" ColumnName="lastdigits" />
+          <ScalarProperty Name="jail" ColumnName="jail" />
+          <ScalarProperty Name="is_dead" ColumnName="is_dead" />
+          <ScalarProperty Name="isFirstConnection" ColumnName="isFirstConnection" />
+          <ScalarProperty Name="tattoos" ColumnName="tattoos" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="last_property" ColumnName="last_property" />
+          <ScalarProperty Name="accounts" ColumnName="accounts" />
+          <ScalarProperty Name="inventory" ColumnName="inventory" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="dob" ColumnName="dob" />
+          <ScalarProperty Name="is_male" ColumnName="is_male" />
+          <ScalarProperty Name="accessories" ColumnName="accessories" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicle_categories">
+      <EntityTypeMapping TypeName="sunucu1sModel.vehicle_categories">
+        <MappingFragment StoreEntitySet="vehicle_categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="label" ColumnName="label" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicle_sold">
+      <EntityTypeMapping TypeName="sunucu1sModel.vehicle_sold">
+        <MappingFragment StoreEntitySet="vehicle_sold">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="client" ColumnName="client" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="plate" ColumnName="plate" />
+          <ScalarProperty Name="soldby" ColumnName="soldby" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicles">
+      <EntityTypeMapping TypeName="sunucu1sModel.vehicles">
+        <MappingFragment StoreEntitySet="vehicles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="inshop" ColumnName="inshop" />
+          <ScalarProperty Name="imglink" ColumnName="imglink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehicles_display">
+      <EntityTypeMapping TypeName="sunucu1sModel.vehicles_display">
+        <MappingFragment StoreEntitySet="vehicles_display">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="model" ColumnName="model" />
+          <ScalarProperty Name="profit" ColumnName="profit" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="whitelist">
+      <EntityTypeMapping TypeName="sunucu1sModel.whitelist">
+        <MappingFragment StoreEntitySet="whitelist">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="identifier" ColumnName="identifier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yellow_tweets">
+      <EntityTypeMapping TypeName="sunucu1sModel.yellow_tweets">
+        <MappingFragment StoreEntitySet="yellow_tweets">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

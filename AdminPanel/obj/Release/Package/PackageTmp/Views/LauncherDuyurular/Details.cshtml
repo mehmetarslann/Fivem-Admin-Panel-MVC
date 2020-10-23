@@ -1,0 +1,42 @@
+﻿@model AdminPanel.Models.Entity.launcher_duyurular
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Duyuru Detayları</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Başlık")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuru_baslik)
+        </dd>
+
+        <dt>
+            @Html.Label("Metin")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuru_metin)
+        </dd>
+
+        <dt>
+            @Html.Label("Tarih")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuru_tarih)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.duyuru_id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

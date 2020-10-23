@@ -1,0 +1,194 @@
+﻿@model AdminPanel.Models.Entity.kaiser_ciuchy
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.identifier)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.identifier)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.bag2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bag2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tshirt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tshirt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tshirt2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tshirt2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.torso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.torso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.torso2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.torso2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legs)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.legs2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.legs2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shoes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shoes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shoes2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shoes2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.arms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.arms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chain)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chain)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.chain2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.chain2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mask)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mask)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mask2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mask2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.decals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.decals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.decals2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.decals2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hat2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hat2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.glasses)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.glasses)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.glasses2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.glasses2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

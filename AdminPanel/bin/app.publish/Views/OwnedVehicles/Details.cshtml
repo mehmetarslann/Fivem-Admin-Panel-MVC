@@ -1,0 +1,82 @@
+﻿@model AdminPanel.Models.Entity.owned_vehicles
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vehicle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vehicle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.job)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.job)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stored)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stored)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jamstate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jamstate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lasthouse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lasthouse)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.plate }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

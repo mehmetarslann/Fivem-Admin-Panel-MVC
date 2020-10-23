@@ -1,0 +1,35 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.cardealer_vehicles>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.vehicle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.vehicle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Detaylar", "Details", new { id=item.id }) |
+                @Html.ActionLink("Sil", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+    
+    </table>

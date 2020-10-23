@@ -1,0 +1,37 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.insto_likes>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>İnstagram Beğenileri</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.insto_accounts.forename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.insto_instas.realUser)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.insto_accounts.forename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.insto_instas.realUser)
+            </td>
+            <td>
+                @Html.ActionLink("Detaylar", "Details", new { id = item.id }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

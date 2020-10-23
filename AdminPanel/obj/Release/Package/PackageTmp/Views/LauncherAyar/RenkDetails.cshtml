@@ -1,0 +1,57 @@
+﻿@model AdminPanel.Models.Entity.launcher_ayarlar
+
+@{
+    ViewBag.Title = "RenkDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Renk Detayları</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Arkaplan Resmi")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.arkaplan_resmi)
+        </dd>
+
+        <dt>
+            @Html.Label("Sol Logo")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sol_logo)
+        </dd>
+
+        <dt>
+            @Html.Label("Sol Panel Renk")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.launcher_renk.renk_id)
+        </dd>
+
+        <dt>
+            @Html.Label("Arkaplan Renk")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.launcher_renk1.renk_id)
+        </dd>
+
+        <dt>
+            @Html.Label("Sağ Panel Renk")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.launcher_renk2.renk_id)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "RenkEdit", new { id = Model.ayarlar_id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

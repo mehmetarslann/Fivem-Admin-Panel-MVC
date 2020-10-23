@@ -1,0 +1,1479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sunucu1sModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="64" />
+    <Property Name="money" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="addon_account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="shared" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="addon_account_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="account_name" Type="varchar" MaxLength="100" />
+    <Property Name="money" Type="int" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="addon_inventory">
+    <Key>
+      <PropertyRef Name="addon_id" />
+    </Key>
+    <Property Name="addon_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="shared" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="addon_inventory_items">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="inventory_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="aircraft_categories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aircraftdealer_aircrafts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vehicle" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aircrafts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="amekanikkasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="banlist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="license" Type="varchar" MaxLength="50" />
+    <Property Name="liveid" Type="varchar" MaxLength="21" />
+    <Property Name="xblid" Type="varchar" MaxLength="21" />
+    <Property Name="discord" Type="varchar" MaxLength="30" />
+    <Property Name="playerip" Type="varchar" MaxLength="25" />
+    <Property Name="targetplayername" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sourceplayername" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="reason" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="timeat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="added" Type="datetime" Precision="0" />
+    <Property Name="expiration" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="permanent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="banlisthistory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="license" Type="varchar" MaxLength="50" />
+    <Property Name="liveid" Type="varchar" MaxLength="21" />
+    <Property Name="xblid" Type="varchar" MaxLength="21" />
+    <Property Name="discord" Type="varchar" MaxLength="30" />
+    <Property Name="playerip" Type="varchar" MaxLength="25" />
+    <Property Name="targetplayername" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sourceplayername" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="reason" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="timeat" Type="int" Nullable="false" />
+    <Property Name="added" Type="datetime" Precision="0" />
+    <Property Name="expiration" Type="int" Nullable="false" />
+    <Property Name="permanent" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="billing">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="sender" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="target_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="target" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="amount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="black_muhshipments">
+    <Key>
+      <PropertyRef Name="black_id" />
+    </Key>
+    <Property Name="black_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="int" />
+    <Property Name="identifier" Type="varchar" MaxLength="50" />
+    <Property Name="label" Type="varchar" MaxLength="50" />
+    <Property Name="item" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+    <Property Name="count" Type="varchar" MaxLength="50" />
+    <Property Name="time" Type="int" />
+  </EntityType>
+  <EntityType Name="black_shipments">
+    <Key>
+      <PropertyRef Name="b_id" />
+    </Key>
+    <Property Name="b_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="int" />
+    <Property Name="identifier" Type="varchar" MaxLength="50" />
+    <Property Name="label" Type="varchar" MaxLength="50" />
+    <Property Name="item" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+    <Property Name="count" Type="varchar" MaxLength="50" />
+    <Property Name="time" Type="int" />
+  </EntityType>
+  <EntityType Name="blackmarket">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="bmekanikkasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="boat_categories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="boatdealer_boats">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vehicle" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="boats">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="car_parking">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="data" Type="longtext" />
+    <Property Name="time" Type="bigint" Nullable="false" />
+    <Property Name="parking" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cardealer_vehicles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vehicle" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cete1kasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="cete2kasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="cete3kasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="cete4kasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="cete5kasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Receiver" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="cete6kasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Receiver" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="characters">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="dateofbirth" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="sex" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="height" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="lastdigits" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="cmekanikkasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="combat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="datastore">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="shared" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="datastore_data">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="60" />
+    <Property Name="data" Type="longtext" />
+  </EntityType>
+  <EntityType Name="datastores">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="64" />
+    <Property Name="data" Type="longtext" />
+  </EntityType>
+  <EntityType Name="disc_ammo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner" Type="text" Nullable="false" />
+    <Property Name="hash" Type="text" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="disc_inventory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner" Type="text" Nullable="false" />
+    <Property Name="type" Type="text" />
+    <Property Name="data" Type="longtext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="disc_inventory_itemdata">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="text" Nullable="false" />
+    <Property Name="description" Type="text" />
+    <Property Name="weight" Type="int" Nullable="false" />
+    <Property Name="closeonuse" Type="bool" Nullable="false" />
+    <Property Name="max" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="disc_property">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="text" Nullable="false" />
+    <Property Name="sold" Type="bool" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="locked" Type="bool" />
+  </EntityType>
+  <EntityType Name="disc_property_garage_vehicles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="text" Nullable="false" />
+    <Property Name="plate" Type="text" Nullable="false" />
+    <Property Name="props" Type="longtext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="disc_property_inventory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="inventory_name" Type="text" />
+    <Property Name="data" Type="longtext" />
+  </EntityType>
+  <EntityType Name="disc_property_owners">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="text" />
+    <Property Name="identifier" Type="text" />
+    <Property Name="active" Type="bool" />
+    <Property Name="owner" Type="bool" />
+  </EntityType>
+  <EntityType Name="dmekanikkasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="dpkeybinds">
+    <Key>
+      <PropertyRef Name="d_id" />
+    </Key>
+    <Property Name="d_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id" Type="varchar" MaxLength="50" />
+    <Property Name="keybind1" Type="varchar" MaxLength="50" />
+    <Property Name="emote1" Type="varchar" MaxLength="255" />
+    <Property Name="keybind2" Type="varchar" MaxLength="50" />
+    <Property Name="emote2" Type="varchar" MaxLength="255" />
+    <Property Name="keybind3" Type="varchar" MaxLength="50" />
+    <Property Name="emote3" Type="varchar" MaxLength="255" />
+    <Property Name="keybind4" Type="varchar" MaxLength="50" />
+    <Property Name="emote4" Type="varchar" MaxLength="255" />
+    <Property Name="keybind5" Type="varchar" MaxLength="50" />
+    <Property Name="emote5" Type="varchar" MaxLength="255" />
+    <Property Name="keybind6" Type="varchar" MaxLength="50" />
+    <Property Name="emote6" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="elkoyma">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="esrar">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="faturalog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="fine_types">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="255" />
+    <Property Name="amount" Type="int" />
+    <Property Name="category" Type="int" />
+  </EntityType>
+  <EntityType Name="glovebox_inventory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="data" Type="text" Nullable="false" />
+    <Property Name="owned" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="hardlog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="hastane">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="identities">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="position" Type="varchar" MaxLength="255" />
+    <Property Name="first_name" Type="varchar" MaxLength="32" />
+    <Property Name="last_name" Type="varchar" MaxLength="32" />
+    <Property Name="dob" Type="varchar" MaxLength="10" />
+    <Property Name="is_male" Type="int" />
+    <Property Name="roles" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="illegalsatis">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="insto_accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="forename" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="surname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="avatar_url" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="insto_instas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="authorId" Type="int" Nullable="false" />
+    <Property Name="realUser" Type="varchar" MaxLength="50" />
+    <Property Name="message" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="filters" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="likes" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="insto_likes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="authorId" Type="int" />
+    <Property Name="inapId" Type="int" />
+  </EntityType>
+  <EntityType Name="inventories">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="64" />
+    <Property Name="items" Type="longtext" />
+  </EntityType>
+  <EntityType Name="items">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="weight" Type="double" Nullable="false" />
+    <Property Name="rare" Type="bool" Nullable="false" />
+    <Property Name="can_remove" Type="bool" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="job_grades">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="job_name" Type="varchar" MaxLength="50" />
+    <Property Name="grade" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="salary" Type="int" Nullable="false" />
+    <Property Name="skin_male" Type="longtext" Nullable="false" />
+    <Property Name="skin_female" Type="longtext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="jobs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="50" />
+    <Property Name="whitelisted" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kaiser_ciuchy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="50" />
+    <Property Name="bag" Type="int" Nullable="false" />
+    <Property Name="bag2" Type="int" Nullable="false" />
+    <Property Name="tshirt" Type="int" Nullable="false" />
+    <Property Name="tshirt2" Type="int" Nullable="false" />
+    <Property Name="torso" Type="int" Nullable="false" />
+    <Property Name="torso2" Type="int" Nullable="false" />
+    <Property Name="legs" Type="int" Nullable="false" />
+    <Property Name="legs2" Type="int" Nullable="false" />
+    <Property Name="shoes" Type="int" Nullable="false" />
+    <Property Name="shoes2" Type="int" Nullable="false" />
+    <Property Name="arms" Type="int" Nullable="false" />
+    <Property Name="chain" Type="int" Nullable="false" />
+    <Property Name="chain2" Type="int" Nullable="false" />
+    <Property Name="mask" Type="int" Nullable="false" />
+    <Property Name="mask2" Type="int" Nullable="false" />
+    <Property Name="decals" Type="int" Nullable="false" />
+    <Property Name="decals2" Type="int" Nullable="false" />
+    <Property Name="hat" Type="int" Nullable="false" />
+    <Property Name="hat2" Type="int" Nullable="false" />
+    <Property Name="glasses" Type="int" Nullable="false" />
+    <Property Name="glasses2" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kokain">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="launcher_ayarlar">
+    <Key>
+      <PropertyRef Name="ayarlar_id" />
+    </Key>
+    <Property Name="ayarlar_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="arkaplan_resmi" Type="tinytext" Nullable="false" />
+    <Property Name="sol_logo" Type="tinytext" Nullable="false" />
+    <Property Name="team_ip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="discord_adres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sunucu_port" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sunucu_ip" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="team_port" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="forum_adres" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sol_renk" Type="int" Nullable="false" />
+    <Property Name="main_renk" Type="int" Nullable="false" />
+    <Property Name="sag_renk" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="launcher_duyurular">
+    <Key>
+      <PropertyRef Name="duyuru_id" />
+    </Key>
+    <Property Name="duyuru_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="duyuru_baslik" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="duyuru_metin" Type="longtext" Nullable="false" />
+    <Property Name="duyuru_tarih" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="launcher_renk">
+    <Key>
+      <PropertyRef Name="renk_id" />
+    </Key>
+    <Property Name="renk_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="red" Type="int" />
+    <Property Name="green" Type="int" />
+    <Property Name="blue" Type="int" />
+  </EntityType>
+  <EntityType Name="launcher_uyeler">
+    <Key>
+      <PropertyRef Name="uye_id" />
+    </Key>
+    <Property Name="uye_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uye_ad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="uye_soyad" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="uye_kadi" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="uye_parola" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="uye_gtarih" Type="datetime" Precision="0" />
+    <Property Name="steam_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="discord_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="hile_tespiti" Type="varchar" MaxLength="50" />
+    <Property Name="login_durum" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="licenses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lsrp_motels">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ident" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="motel_id" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mdt_reports">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="char_id" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="255" />
+    <Property Name="incident" Type="longtext" />
+    <Property Name="charges" Type="longtext" />
+    <Property Name="author" Type="varchar" MaxLength="255" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="date" Type="varchar" MaxLength="255" />
+    <Property Name="jailtime" Type="int" />
+  </EntityType>
+  <EntityType Name="mdt_warrants">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="char_id" Type="int" />
+    <Property Name="report_id" Type="int" />
+    <Property Name="report_title" Type="varchar" MaxLength="255" />
+    <Property Name="charges" Type="longtext" />
+    <Property Name="date" Type="varchar" MaxLength="255" />
+    <Property Name="expire" Type="varchar" MaxLength="255" />
+    <Property Name="notes" Type="varchar" MaxLength="255" />
+    <Property Name="author" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="migrations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="module" Type="varchar" MaxLength="64" />
+    <Property Name="last" Type="int" />
+  </EntityType>
+  <EntityType Name="outfits">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idSteam" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="dad" Type="int" Nullable="false" />
+    <Property Name="mum" Type="int" Nullable="false" />
+    <Property Name="dadmumpercent" Type="int" Nullable="false" />
+    <Property Name="skinton" Type="int" Nullable="false" />
+    <Property Name="eyecolor" Type="int" Nullable="false" />
+    <Property Name="acne" Type="int" Nullable="false" />
+    <Property Name="skinproblem" Type="int" Nullable="false" />
+    <Property Name="freckle" Type="int" Nullable="false" />
+    <Property Name="wrinkle" Type="int" Nullable="false" />
+    <Property Name="wrinkleopacity" Type="int" Nullable="false" />
+    <Property Name="eyebrow" Type="int" Nullable="false" />
+    <Property Name="eyebrowopacity" Type="int" Nullable="false" />
+    <Property Name="beard" Type="int" Nullable="false" />
+    <Property Name="beardopacity" Type="int" Nullable="false" />
+    <Property Name="beardcolor" Type="int" Nullable="false" />
+    <Property Name="hair" Type="int" Nullable="false" />
+    <Property Name="hairtext" Type="int" Nullable="false" />
+    <Property Name="torso" Type="int" Nullable="false" />
+    <Property Name="torsotext" Type="int" Nullable="false" />
+    <Property Name="leg" Type="int" Nullable="false" />
+    <Property Name="legtext" Type="int" Nullable="false" />
+    <Property Name="shoes" Type="int" Nullable="false" />
+    <Property Name="shoestext" Type="int" Nullable="false" />
+    <Property Name="accessory" Type="int" Nullable="false" />
+    <Property Name="accessorytext" Type="int" Nullable="false" />
+    <Property Name="undershirt" Type="int" Nullable="false" />
+    <Property Name="undershirttext" Type="int" Nullable="false" />
+    <Property Name="torso2" Type="int" Nullable="false" />
+    <Property Name="torso2text" Type="int" Nullable="false" />
+    <Property Name="prop_hat" Type="int" Nullable="false" />
+    <Property Name="prop_hat_text" Type="int" Nullable="false" />
+    <Property Name="prop_glasses" Type="int" Nullable="false" />
+    <Property Name="prop_glasses_text" Type="int" Nullable="false" />
+    <Property Name="prop_earrings" Type="int" Nullable="false" />
+    <Property Name="prop_earrings_text" Type="int" Nullable="false" />
+    <Property Name="prop_watches" Type="int" Nullable="false" />
+    <Property Name="prop_watches_text" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="owned_aircrafts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="state" Type="bool" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="vehicle" Type="longtext" />
+  </EntityType>
+  <EntityType Name="owned_boats">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="state" Type="bool" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="vehicle" Type="longtext" />
+  </EntityType>
+  <EntityType Name="owned_properties">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="price" Type="double" Nullable="false" />
+    <Property Name="rented" Type="int" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="owned_vehicles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="22" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="vehicle" Type="longtext" />
+    <Property Name="type" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="job" Type="varchar" MaxLength="20" />
+    <Property Name="stored" Type="bool" Nullable="false" />
+    <Property Name="state" Type="bool" Nullable="false" />
+    <Property Name="jamstate" Type="int" Nullable="false" />
+    <Property Name="lasthouse" Type="int" />
+  </EntityType>
+  <EntityType Name="owned_vehicles_headlights">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plate" Type="text" Nullable="false" />
+    <Property Name="color" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phone_app_chat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="channel" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="message" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phone_calls">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="num" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="incoming" Type="int" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="accepts" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phone_ch_reddit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="redgkit" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phone_messages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="transmitter" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="receiver" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="message" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="isRead" Type="int" Nullable="false" />
+    <Property Name="owner" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phone_reddit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="redgkit" Type="varchar" MaxLength="20" />
+    <Property Name="reditsage" Type="varchar" MaxLength="255" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phone_shops">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="item" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phone_users_contacts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="60" />
+    <Property Name="number" Type="varchar" MaxLength="10" />
+    <Property Name="display" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="players">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="identity_id" Type="varchar" MaxLength="64" />
+    <Property Name="roles" Type="mediumtext" />
+    <Property Name="accessories" Type="mediumtext" />
+  </EntityType>
+  <EntityType Name="poliskasa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender1" Type="varchar" MaxLength="50" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Sender2" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="varchar" MaxLength="50" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="properties">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" />
+    <Property Name="label" Type="varchar" MaxLength="255" />
+    <Property Name="entering" Type="varchar" MaxLength="255" />
+    <Property Name="exit" Type="varchar" MaxLength="255" />
+    <Property Name="inside" Type="varchar" MaxLength="255" />
+    <Property Name="outside" Type="varchar" MaxLength="255" />
+    <Property Name="ipls" Type="varchar" MaxLength="255" />
+    <Property Name="gateway" Type="varchar" MaxLength="255" />
+    <Property Name="is_single" Type="int" />
+    <Property Name="is_room" Type="int" />
+    <Property Name="is_gateway" Type="int" />
+    <Property Name="room_menu" Type="varchar" MaxLength="255" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="owned" Type="int" />
+    <Property Name="free" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="rented_vehicles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vehicle" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="player_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="base_price" Type="int" Nullable="false" />
+    <Property Name="rent_price" Type="int" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="22" Nullable="false" />
+  </EntityType>
+  <EntityType Name="society_moneywash">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="society" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="amount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="transfer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="50" />
+    <Property Name="Amount" Type="int" />
+    <Property Name="Reciever" Type="varchar" MaxLength="50" />
+    <Property Name="Time" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="truck_inventory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="item" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="itemt" Type="varchar" MaxLength="50" />
+    <Property Name="owned" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trunk_inventory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="data" Type="text" Nullable="false" />
+    <Property Name="owned" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="twitter_accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="avatar_url" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="twitter_likes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="authorId" Type="int" />
+    <Property Name="tweetId" Type="int" />
+  </EntityType>
+  <EntityType Name="twitter_tweets">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="authorId" Type="int" Nullable="false" />
+    <Property Name="realUser" Type="varchar" MaxLength="50" />
+    <Property Name="message" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+    <Property Name="likes" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_accounts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="22" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="money" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_convictions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="char_id" Type="int" />
+    <Property Name="offense" Type="varchar" MaxLength="255" />
+    <Property Name="count" Type="int" />
+  </EntityType>
+  <EntityType Name="user_inventory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="22" Nullable="false" />
+    <Property Name="item" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_licenses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="owner" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_mdt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="char_id" Type="int" />
+    <Property Name="notes" Type="varchar" MaxLength="255" />
+    <Property Name="mugshot_url" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="50" />
+    <Property Name="license" Type="varchar" MaxLength="50" />
+    <Property Name="money" Type="int" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="skin" Type="longtext" />
+    <Property Name="job" Type="varchar" MaxLength="50" />
+    <Property Name="job_grade" Type="int" />
+    <Property Name="loadout" Type="longtext" />
+    <Property Name="position" Type="varchar" MaxLength="36" />
+    <Property Name="bank" Type="int" />
+    <Property Name="permission_level" Type="int" />
+    <Property Name="group" Type="varchar" MaxLength="50" />
+    <Property Name="status" Type="longtext" />
+    <Property Name="firstname" Type="varchar" MaxLength="50" />
+    <Property Name="lastname" Type="varchar" MaxLength="50" />
+    <Property Name="dateofbirth" Type="varchar" MaxLength="25" />
+    <Property Name="sex" Type="varchar" MaxLength="10" />
+    <Property Name="height" Type="varchar" MaxLength="5" />
+    <Property Name="lastpos" Type="varchar" MaxLength="255" />
+    <Property Name="DmvTest" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="vote" Type="varchar" MaxLength="254" />
+    <Property Name="lastdigits" Type="varchar" MaxLength="255" />
+    <Property Name="jail" Type="int" Nullable="false" />
+    <Property Name="is_dead" Type="bool" />
+    <Property Name="isFirstConnection" Type="int" />
+    <Property Name="tattoos" Type="longtext" />
+    <Property Name="phone_number" Type="varchar" MaxLength="10" />
+    <Property Name="last_property" Type="varchar" MaxLength="255" />
+    <Property Name="accounts" Type="longtext" />
+    <Property Name="inventory" Type="longtext" />
+    <Property Name="last_name" Type="varchar" MaxLength="32" />
+    <Property Name="dob" Type="varchar" MaxLength="10" />
+    <Property Name="is_male" Type="int" />
+    <Property Name="accessories" Type="mediumtext" />
+    <Property Name="first_name" Type="varchar" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="vehicle_categories">
+    <Key>
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="label" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vehicle_sold">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="client" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="plate" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="soldby" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="date" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="vehicles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="60" />
+    <Property Name="inshop" Type="int" Nullable="false" />
+    <Property Name="imglink" Type="text" />
+  </EntityType>
+  <EntityType Name="vehicles_display">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="profit" Type="int" Nullable="false" />
+    <Property Name="price" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="whitelist">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="identifier" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="yellow_tweets">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="phone_number" Type="varchar" MaxLength="256" />
+    <Property Name="firstname" Type="varchar" MaxLength="256" />
+    <Property Name="lastname" Type="varchar" MaxLength="256" />
+    <Property Name="message" Type="varchar" MaxLength="256" Nullable="false" />
+    <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_insto_instas_insto_accounts">
+    <End Role="insto_accounts" Type="Self.insto_accounts" Multiplicity="1" />
+    <End Role="insto_instas" Type="Self.insto_instas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="insto_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="insto_instas">
+        <PropertyRef Name="authorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_insto_likes_insto_accounts">
+    <End Role="insto_accounts" Type="Self.insto_accounts" Multiplicity="0..1" />
+    <End Role="insto_likes" Type="Self.insto_likes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="insto_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="insto_likes">
+        <PropertyRef Name="authorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_insto_likes_insto_instas">
+    <End Role="insto_instas" Type="Self.insto_instas" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="insto_likes" Type="Self.insto_likes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="insto_instas">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="insto_likes">
+        <PropertyRef Name="inapId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_launcher_ayarlar_launcher_renk">
+    <End Role="launcher_renk" Type="Self.launcher_renk" Multiplicity="1" />
+    <End Role="launcher_ayarlar" Type="Self.launcher_ayarlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="launcher_renk">
+        <PropertyRef Name="renk_id" />
+      </Principal>
+      <Dependent Role="launcher_ayarlar">
+        <PropertyRef Name="sol_renk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_launcher_ayarlar_launcher_renk_2">
+    <End Role="launcher_renk" Type="Self.launcher_renk" Multiplicity="1" />
+    <End Role="launcher_ayarlar" Type="Self.launcher_ayarlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="launcher_renk">
+        <PropertyRef Name="renk_id" />
+      </Principal>
+      <Dependent Role="launcher_ayarlar">
+        <PropertyRef Name="main_renk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_launcher_ayarlar_launcher_renk_3">
+    <End Role="launcher_renk" Type="Self.launcher_renk" Multiplicity="1" />
+    <End Role="launcher_ayarlar" Type="Self.launcher_ayarlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="launcher_renk">
+        <PropertyRef Name="renk_id" />
+      </Principal>
+      <Dependent Role="launcher_ayarlar">
+        <PropertyRef Name="sag_renk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_twitter_likes_twitter_accounts">
+    <End Role="twitter_accounts" Type="Self.twitter_accounts" Multiplicity="0..1" />
+    <End Role="twitter_likes" Type="Self.twitter_likes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="twitter_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="twitter_likes">
+        <PropertyRef Name="authorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_twitter_likes_twitter_tweets">
+    <End Role="twitter_tweets" Type="Self.twitter_tweets" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="twitter_likes" Type="Self.twitter_likes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="twitter_tweets">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="twitter_likes">
+        <PropertyRef Name="tweetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_twitter_tweets_twitter_accounts">
+    <End Role="twitter_accounts" Type="Self.twitter_accounts" Multiplicity="1" />
+    <End Role="twitter_tweets" Type="Self.twitter_tweets" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="twitter_accounts">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="twitter_tweets">
+        <PropertyRef Name="authorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sunucu1sModelStoreContainer">
+    <EntitySet Name="accounts" EntityType="Self.accounts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="addon_account" EntityType="Self.addon_account" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="addon_account_data" EntityType="Self.addon_account_data" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="addon_inventory" EntityType="Self.addon_inventory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="addon_inventory_items" EntityType="Self.addon_inventory_items" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="aircraft_categories" EntityType="Self.aircraft_categories" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="aircraftdealer_aircrafts" EntityType="Self.aircraftdealer_aircrafts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="aircrafts" EntityType="Self.aircrafts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="amekanikkasa" EntityType="Self.amekanikkasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="banlist" EntityType="Self.banlist" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="banlisthistory" EntityType="Self.banlisthistory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="billing" EntityType="Self.billing" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="black_muhshipments" EntityType="Self.black_muhshipments" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="black_shipments" EntityType="Self.black_shipments" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="blackmarket" EntityType="Self.blackmarket" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="bmekanikkasa" EntityType="Self.bmekanikkasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="boat_categories" EntityType="Self.boat_categories" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="boatdealer_boats" EntityType="Self.boatdealer_boats" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="boats" EntityType="Self.boats" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="car_parking" EntityType="Self.car_parking" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cardealer_vehicles" EntityType="Self.cardealer_vehicles" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cete1kasa" EntityType="Self.cete1kasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cete2kasa" EntityType="Self.cete2kasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cete3kasa" EntityType="Self.cete3kasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cete4kasa" EntityType="Self.cete4kasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cete5kasa" EntityType="Self.cete5kasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cete6kasa" EntityType="Self.cete6kasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="characters" EntityType="Self.characters" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="cmekanikkasa" EntityType="Self.cmekanikkasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="combat" EntityType="Self.combat" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="datastore" EntityType="Self.datastore" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="datastore_data" EntityType="Self.datastore_data" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="datastores" EntityType="Self.datastores" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="disc_ammo" EntityType="Self.disc_ammo" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="disc_inventory" EntityType="Self.disc_inventory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="disc_inventory_itemdata" EntityType="Self.disc_inventory_itemdata" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="disc_property" EntityType="Self.disc_property" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="disc_property_garage_vehicles" EntityType="Self.disc_property_garage_vehicles" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="disc_property_inventory" EntityType="Self.disc_property_inventory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="disc_property_owners" EntityType="Self.disc_property_owners" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="dmekanikkasa" EntityType="Self.dmekanikkasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="dpkeybinds" EntityType="Self.dpkeybinds" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="elkoyma" EntityType="Self.elkoyma" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="esrar" EntityType="Self.esrar" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="faturalog" EntityType="Self.faturalog" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="fine_types" EntityType="Self.fine_types" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="glovebox_inventory" EntityType="Self.glovebox_inventory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="hardlog" EntityType="Self.hardlog" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="hastane" EntityType="Self.hastane" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="identities" EntityType="Self.identities" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="illegalsatis" EntityType="Self.illegalsatis" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="insto_accounts" EntityType="Self.insto_accounts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="insto_instas" EntityType="Self.insto_instas" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="insto_likes" EntityType="Self.insto_likes" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="inventories" EntityType="Self.inventories" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="items" EntityType="Self.items" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="job_grades" EntityType="Self.job_grades" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="jobs" EntityType="Self.jobs" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="kaiser_ciuchy" EntityType="Self.kaiser_ciuchy" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="kokain" EntityType="Self.kokain" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="launcher_ayarlar" EntityType="Self.launcher_ayarlar" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="launcher_duyurular" EntityType="Self.launcher_duyurular" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="launcher_renk" EntityType="Self.launcher_renk" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="launcher_uyeler" EntityType="Self.launcher_uyeler" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="licenses" EntityType="Self.licenses" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="lsrp_motels" EntityType="Self.lsrp_motels" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="mdt_reports" EntityType="Self.mdt_reports" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="mdt_warrants" EntityType="Self.mdt_warrants" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="migrations" EntityType="Self.migrations" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="outfits" EntityType="Self.outfits" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="owned_aircrafts" EntityType="Self.owned_aircrafts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="owned_boats" EntityType="Self.owned_boats" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="owned_properties" EntityType="Self.owned_properties" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="owned_vehicles" EntityType="Self.owned_vehicles" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="owned_vehicles_headlights" EntityType="Self.owned_vehicles_headlights" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="phone_app_chat" EntityType="Self.phone_app_chat" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="phone_calls" EntityType="Self.phone_calls" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="phone_ch_reddit" EntityType="Self.phone_ch_reddit" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="phone_messages" EntityType="Self.phone_messages" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="phone_reddit" EntityType="Self.phone_reddit" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="phone_shops" EntityType="Self.phone_shops" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="phone_users_contacts" EntityType="Self.phone_users_contacts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="players" EntityType="Self.players" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="poliskasa" EntityType="Self.poliskasa" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="properties" EntityType="Self.properties" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="rented_vehicles" EntityType="Self.rented_vehicles" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="society_moneywash" EntityType="Self.society_moneywash" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="transfer" EntityType="Self.transfer" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="truck_inventory" EntityType="Self.truck_inventory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="trunk_inventory" EntityType="Self.trunk_inventory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="twitter_accounts" EntityType="Self.twitter_accounts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="twitter_likes" EntityType="Self.twitter_likes" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="twitter_tweets" EntityType="Self.twitter_tweets" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="user_accounts" EntityType="Self.user_accounts" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="user_convictions" EntityType="Self.user_convictions" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="user_inventory" EntityType="Self.user_inventory" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="user_licenses" EntityType="Self.user_licenses" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="user_mdt" EntityType="Self.user_mdt" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="vehicle_categories" EntityType="Self.vehicle_categories" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="vehicle_sold" EntityType="Self.vehicle_sold" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="vehicles" EntityType="Self.vehicles" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="vehicles_display" EntityType="Self.vehicles_display" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="whitelist" EntityType="Self.whitelist" Schema="sunucu1s" store:Type="Tables" />
+    <EntitySet Name="yellow_tweets" EntityType="Self.yellow_tweets" Schema="sunucu1s" store:Type="Tables" />
+    <AssociationSet Name="FK_insto_instas_insto_accounts" Association="Self.FK_insto_instas_insto_accounts">
+      <End Role="insto_accounts" EntitySet="insto_accounts" />
+      <End Role="insto_instas" EntitySet="insto_instas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_insto_likes_insto_accounts" Association="Self.FK_insto_likes_insto_accounts">
+      <End Role="insto_accounts" EntitySet="insto_accounts" />
+      <End Role="insto_likes" EntitySet="insto_likes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_insto_likes_insto_instas" Association="Self.FK_insto_likes_insto_instas">
+      <End Role="insto_instas" EntitySet="insto_instas" />
+      <End Role="insto_likes" EntitySet="insto_likes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_launcher_ayarlar_launcher_renk" Association="Self.FK_launcher_ayarlar_launcher_renk">
+      <End Role="launcher_renk" EntitySet="launcher_renk" />
+      <End Role="launcher_ayarlar" EntitySet="launcher_ayarlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_launcher_ayarlar_launcher_renk_2" Association="Self.FK_launcher_ayarlar_launcher_renk_2">
+      <End Role="launcher_renk" EntitySet="launcher_renk" />
+      <End Role="launcher_ayarlar" EntitySet="launcher_ayarlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_launcher_ayarlar_launcher_renk_3" Association="Self.FK_launcher_ayarlar_launcher_renk_3">
+      <End Role="launcher_renk" EntitySet="launcher_renk" />
+      <End Role="launcher_ayarlar" EntitySet="launcher_ayarlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_twitter_likes_twitter_accounts" Association="Self.FK_twitter_likes_twitter_accounts">
+      <End Role="twitter_accounts" EntitySet="twitter_accounts" />
+      <End Role="twitter_likes" EntitySet="twitter_likes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_twitter_likes_twitter_tweets" Association="Self.FK_twitter_likes_twitter_tweets">
+      <End Role="twitter_tweets" EntitySet="twitter_tweets" />
+      <End Role="twitter_likes" EntitySet="twitter_likes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_twitter_tweets_twitter_accounts" Association="Self.FK_twitter_tweets_twitter_accounts">
+      <End Role="twitter_accounts" EntitySet="twitter_accounts" />
+      <End Role="twitter_tweets" EntitySet="twitter_tweets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,76 @@
+﻿@model AdminPanel.Models.Entity.launcher_ayarlar
+
+@{
+    ViewBag.Title = "RenkEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Renk ve Resim İşlemleri</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ayarlar_id)
+
+        <div class="form-group">
+            @Html.Label("Arkaplan Resmi")
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.arkaplan_resmi, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.arkaplan_resmi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Sol Logo")
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sol_logo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.sol_logo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("=> Renk işlemlerini değiştirmek için önce renk tanımlama alanından renklerinizi belirleyip buradan,seçebilirsiniz")
+            <br />
+            @Html.Label("Varsayılan renk olarak bırakmak için 1'de bırakabilirsiniz")
+
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Sol Panel Renk")
+            <div class="col-md-10">
+                @Html.DropDownList("sol_renk", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.sol_renk, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Arkaplan Renk")
+            <div class="col-md-10">
+                @Html.DropDownList("main_renk", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.main_renk, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Sağ Panel Renk")
+            <div class="col-md-10">
+                @Html.DropDownList("sag_renk", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.sag_renk, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Geri Dön", "Index")
+</div>

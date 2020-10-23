@@ -1,0 +1,33 @@
+﻿@model AdminPanel.Models.Entity.insto_likes
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.insto_accounts.forename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.insto_accounts.forename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.insto_instas.realUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.insto_instas.realUser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.launcher_renk>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Renk Tanımlama</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("ID")
+        </th>
+        <th>
+            @Html.Label("Red")
+        </th>
+        <th>
+            @Html.Label("Green")
+        </th>
+        <th>
+            @Html.Label("Blue")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.renk_id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.red)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.green)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.blue)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.renk_id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.renk_id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.renk_id })
+        </td>
+    </tr>
+}
+
+</table>

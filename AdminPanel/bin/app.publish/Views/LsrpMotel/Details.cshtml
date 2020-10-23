@@ -1,0 +1,32 @@
+﻿@model AdminPanel.Models.Entity.lsrp_motels
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ident)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.motel_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.motel_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

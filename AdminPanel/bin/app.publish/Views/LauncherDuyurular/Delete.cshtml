@@ -1,0 +1,48 @@
+﻿@model AdminPanel.Models.Entity.launcher_duyurular
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sil</h2>
+
+<h3>Duyuruyu Silmek İstediğinize Emin Misiniz?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Başlık")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuru_baslik)
+        </dd>
+
+        <dt>
+            @Html.Label("Metin")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuru_metin)
+        </dd>
+
+        <dt>
+            @Html.Label("Tarih")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duyuru_tarih)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,50 @@
+﻿@model AdminPanel.Models.Entity.owned_boats
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detaylar</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.owner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vehicle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vehicle)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

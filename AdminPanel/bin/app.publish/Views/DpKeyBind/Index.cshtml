@@ -1,0 +1,106 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.dpkeybinds>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Emote Kullanımları</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.keybind1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emote1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.keybind2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emote2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.keybind3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emote3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.keybind4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emote4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.keybind5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emote5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.keybind6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emote6)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keybind1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emote1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keybind2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emote2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keybind3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emote3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keybind4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emote4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keybind5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emote5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.keybind6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emote6)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.d_id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.d_id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.d_id })
+        </td>
+    </tr>
+}
+
+</table>

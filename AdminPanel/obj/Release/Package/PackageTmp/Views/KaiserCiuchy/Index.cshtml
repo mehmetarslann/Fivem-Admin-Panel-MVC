@@ -1,0 +1,160 @@
+﻿@model IEnumerable<AdminPanel.Models.Entity.kaiser_ciuchy>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kıyafet Logları</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kayıt Ekle", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.identifier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bag2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tshirt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tshirt2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.torso)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.torso2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.legs2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shoes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.shoes2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arms)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chain)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chain2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mask)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mask2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.decals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.decals2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hat2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.glasses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.glasses2)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.identifier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bag2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tshirt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tshirt2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.torso)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.torso2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.legs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.legs2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shoes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shoes2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chain)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chain2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mask)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mask2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.decals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.decals2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hat2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.glasses)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.glasses2)
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detaylar", "Details", new { id=item.id }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

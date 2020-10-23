@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+    <div class="container-fluid">
+        <h1 class="mt-4">Genel Tablo Verileri</h1>
+        <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item"><a href="~/Admin/Index">Gösterge Paneli</a></li>
+            <li class="breadcrumb-item active">Charts</li>
+        </ol>
+        <div class="card mb-4">
+            <div class="card-body">
+            </div>
+            <div class="row">
+            </div>
+            <div class="card mb-4">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body">Toplam Araç Sayısı</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                @ViewBag.AracSayisi
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-warning text-white mb-4">
+                            <div class="card-body">Launcher Üye Sayısı</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                @ViewBag.LauncherToplam
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-success text-white mb-4">
+                            <div class="card-body">Toplam Oyuncu Sayısı</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                @ViewBag.KullaniciSayi
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-danger text-white mb-4">
+                            <div class="card-body">Whitelist Sayısı</div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                @ViewBag.Whitelist
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-chart-pie mr-1"></i>
+                        Launcher Üyeleri
+                    </div>
+                    @Html.Action("LauncherUyePartial", "Partial")
+                    <div class="card-footer small text-muted">Güncellenme Tarihi @DateTime.Now</div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-chart-pie mr-1"></i>
+                        Kullanıcı Bilgileri
+                    </div>
+                    @Html.Action("UserPartial", "Partial")
+                    <div class="card-footer small text-muted">Güncellenme Tarihi @DateTime.Now</div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-chart-bar mr-1"></i>
+                        İllegal Satış Bilgileri
+                    </div>
+                    @Html.Action("illegalPartial", "Partial")
+                    <div class="card-footer small text-muted">Güncellenme Tarihi @DateTime.Now</div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-chart-bar mr-1"></i>
+                        Araç Bilgileri
+                    </div>
+                    @Html.Action("VehiclePartial", "Partial")
+                    <div class="card-footer small text-muted">Güncellenme Tarihi @DateTime.Now</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
